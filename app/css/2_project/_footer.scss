@@ -1,0 +1,15 @@
+.footer {
+  display: table-row;
+  height: 1px;
+
+  text-align: center;
+}
+
+.footer p {
+  font-size: 11px;
+  color: #959595;
+}
+
+  .footer p:last-child {
+    margin-bottom: 25px;
+  }

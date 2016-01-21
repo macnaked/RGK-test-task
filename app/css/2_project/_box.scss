@@ -1,0 +1,33 @@
+.box {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+
+  border-radius: 6px;
+
+  -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .41);
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .41);
+}
+
+.box-header {
+  padding: 20px;
+
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid #cccccc;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f5f5f5+100 */
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #f5f5f5 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ffffff 0%,#f5f5f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.box-body {
+  background: #fff;
+  padding: 59px;
+  border-radius: 0 0 6px 6px;
+}

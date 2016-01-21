@@ -1,0 +1,41 @@
+.message-group {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+  .message-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .message-group.__text {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #000;
+  }
+
+  .message-group.__user-enter {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .message-group__icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-right: 18px;
+  }
+
+    .message-group__icon.__mobile {
+      width: 95px;
+      height: 83px;
+      background: url(../img/message-group/icon-mobile.png) no-repeat;
+    }
+
+.message-group__row {
+  margin-top: 29px;
+}
+
+  .message-group__row:first-child {
+    margin-top: 0;
+  }

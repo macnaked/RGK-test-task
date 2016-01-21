@@ -1,0 +1,53 @@
+.menu-main__item {
+  float: left;
+  width: 33.33%;
+}
+
+  .menu-main__item:first-child a {
+    border-left: none;
+  }
+
+  .menu-main a {
+    display: block;
+
+    line-height: 43px;
+
+    text-align: center;
+    font-size: 12px;
+    font-weight: 100;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border-left: 1px solid #b5b5b5;
+  }
+
+    .menu-main a span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+  .menu-main__icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-right: 12px;
+  }
+
+    .menu-main__icon.__music {
+      width: 34px;
+      height: 35px;
+      background: url(../img/menu-main/icon-music.png) no-repeat;
+    }
+
+    .menu-main__icon.__video {
+      width: 40px;
+      height: 39px;
+      background: url(../img/menu-main/icon-video.png) no-repeat;
+    }
+
+    .menu-main__icon.__games {
+      width: 44px;
+      height: 30px;
+      background: url(../img/menu-main/icon-games.png) no-repeat;
+    }
