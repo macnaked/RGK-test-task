@@ -1,4 +1,57 @@
 @charset "UTF-8";
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+$icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+
+.icon-home {
+  @include retina-sprite($icon-home-group);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*
+The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in SCSS
+
+@include retina-sprites($retina-groups);
+*/
 /* Layer 0 - Reset */
 /*
     Combination of http://meyerweb.com/eric/tools/css/reset/, http://github.com/necolas/normalize.css, http://ru.html5boilerplate.com and personal experience
@@ -323,8 +376,8 @@ body {
 .button-1 {
   display: block;
   width: 100%;
-  height: 80px;
-  line-height: 80px;
+  height: 79px;
+  line-height: 79px;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4f29c8+0,36169d+100 */
   background: #4f29c8;
   background: -moz-linear-gradient(top, #4f29c8 0%, #36169d 100%);
@@ -340,8 +393,8 @@ body {
 .header {
   min-height: 47px;
   background: #fff;
-  -webkit-box-shadow: 0 5px 3px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 5px 3px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #b5b5b5; }
 
 .footer {
@@ -373,7 +426,7 @@ body {
 
 .menu-main a {
   display: block;
-  line-height: 43px;
+  line-height: 46px;
   text-align: center;
   font-size: 12px;
   font-weight: 100;
@@ -392,19 +445,34 @@ body {
   margin-right: 12px; }
 
 .menu-main__icon.__music {
-  width: 34px;
-  height: 35px;
-  background: url(../img/menu-main/icon-music.png) no-repeat; }
+  background-image: url(../img/sprite.png);
+  background-position: -47px -19px;
+  width: 17px;
+  height: 17px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .menu-main__icon.__music {
+      background-image: url(../img/sprite@2x.png);
+      background-size: 66px 56px; } }
 
 .menu-main__icon.__video {
-  width: 40px;
-  height: 39px;
-  background: url(../img/menu-main/icon-video.png) no-repeat; }
+  background-image: url(../img/sprite.png);
+  background-position: -47px 0px;
+  width: 19px;
+  height: 19px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .menu-main__icon.__video {
+      background-image: url(../img/sprite@2x.png);
+      background-size: 66px 56px; } }
 
 .menu-main__icon.__games {
-  width: 44px;
-  height: 30px;
-  background: url(../img/menu-main/icon-games.png) no-repeat; }
+  background-image: url(../img/sprite.png);
+  background-position: 0px -41px;
+  width: 22px;
+  height: 15px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .menu-main__icon.__games {
+      background-image: url(../img/sprite@2x.png);
+      background-size: 66px 56px; } }
 
 .box {
   max-width: 600px;
@@ -415,7 +483,7 @@ body {
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.41); }
 
 .box-header {
-  padding: 20px;
+  padding: 10px;
   border-radius: 6px 6px 0 0;
   border-bottom: 1px solid #cccccc;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f5f5f5+100 */
@@ -433,12 +501,12 @@ body {
 
 .box-body {
   background: #fff;
-  padding: 59px;
+  padding: 23px 29px 28px;
   border-radius: 0 0 6px 6px; }
 
 .message-group {
   text-align: center;
-  margin-bottom: 15px; }
+  margin-bottom: 20px; }
 
 .message-group:last-child {
   margin-bottom: 0; }
@@ -459,12 +527,17 @@ body {
   margin-right: 18px; }
 
 .message-group__icon.__mobile {
-  width: 95px;
-  height: 83px;
-  background: url(../img/message-group/icon-mobile.png) no-repeat; }
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 47px;
+  height: 41px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .message-group__icon.__mobile {
+      background-image: url(../img/sprite@2x.png);
+      background-size: 66px 56px; } }
 
 .message-group__row {
-  margin-top: 29px; }
+  margin-top: 15px; }
 
 .message-group__row:first-child {
   margin-top: 0; }

@@ -157,8 +157,8 @@ gulp.task('build:sprite', ['clean:sprite'], function() {
   		.pipe(spritesmith({
     imgName: '../' + config.imagesFolder + '/sprite.png',
     cssName: '_sprite.scss',
-    // retinaSrcFilter: ['images/**/*@2x.png'],    // number of RETINA images must be the same as number of normal images
-    // retinaImgName: '../images/sprite@2x.png'    // size of RETINA images must be 2x bigger than size of normal images
+    retinaSrcFilter: [config.imagesFolder + '/**/*@2x.png'],    // number of RETINA images must be the same as number of normal images
+    retinaImgName: '../' + config.imagesFolder + '/sprite@2x.png'    // size of RETINA images must be 2x bigger than size of normal images
   }));
   var cssStream = spriteData.css.pipe(gulp.dest(config.cssFolder));
   var imgStream = spriteData.img.pipe(gulp.dest(config.imagesFolder));

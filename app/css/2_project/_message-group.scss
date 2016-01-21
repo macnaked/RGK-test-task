@@ -1,6 +1,6 @@
 .message-group {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
   .message-group:last-child {
@@ -27,13 +27,14 @@
   }
 
     .message-group__icon.__mobile {
-      width: 95px;
-      height: 83px;
-      background: url(../img/message-group/icon-mobile.png) no-repeat;
+      // width: 95px;
+      // height: 83px;
+      // background: url(../img/message-group/message-group__icon-mobile.png) no-repeat;
+      @include retina-sprite($message-group-icon-mobile-group);
     }
 
 .message-group__row {
-  margin-top: 29px;
+  margin-top: 15px;
 }
 
   .message-group__row:first-child {
