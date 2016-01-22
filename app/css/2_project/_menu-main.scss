@@ -10,7 +10,7 @@
   .menu-main a {
     display: block;
 
-    line-height: 46px;
+    line-height: $headerHeight - 1px;
 
     text-align: center;
     font-size: 12px;

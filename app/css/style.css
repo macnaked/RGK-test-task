@@ -409,6 +409,10 @@ body {
 .footer p:last-child {
   margin-bottom: 25px; }
 
+@media (max-width: 1000px) {
+  .footer p:last-child {
+    margin-bottom: 5px; } }
+
 .content {
   display: table-row;
   height: 100%; }
@@ -479,11 +483,13 @@ body {
   width: 100%;
   margin: 0 auto;
   border-radius: 6px;
-  -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.41);
-  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.41); }
+  -webkit-box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.41); }
 
 .box-header {
-  padding: 10px;
+  width: 100%;
+  display: table;
+  padding: 0 10px;
   border-radius: 6px 6px 0 0;
   border-bottom: 1px solid #cccccc;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f5f5f5+100 */
@@ -499,32 +505,46 @@ body {
   font-size: 16px;
   font-weight: 100; }
 
+.box-header__title {
+  display: table-cell;
+  vertical-align: middle;
+  height: 35px; }
+
 .box-body {
   background: #fff;
   padding: 23px 29px 28px;
   border-radius: 0 0 6px 6px; }
 
+@media (max-width: 1000px) and (max-height: 479px) {
+  .box-body {
+    padding: 10px; } }
+
 .message-group {
   text-align: center;
-  margin-bottom: 20px; }
+  line-height: 1.4;
+  margin-bottom: 15px; }
 
 .message-group:last-child {
   margin-bottom: 0; }
 
 .message-group.__text {
+  max-width: 332px;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 14px;
-  line-height: 1.2;
-  color: #000; }
+  color: #000;
+  text-align: left; }
 
 .message-group.__user-enter {
   font-size: 18px;
   font-weight: 600;
-  color: #000; }
+  color: #000;
+  text-align: center; }
 
 .message-group__icon {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 18px; }
+  margin-right: 12px; }
 
 .message-group__icon.__mobile {
   background-image: url(../img/sprite.png);
@@ -536,11 +556,36 @@ body {
       background-image: url(../img/sprite@2x.png);
       background-size: 66px 56px; } }
 
+.message-group__icon.__mobile + span {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 65px); }
+
 .message-group__row {
   margin-top: 15px; }
 
 .message-group__row:first-child {
   margin-top: 0; }
+
+.message-group__row.__submit {
+  max-width: 268px;
+  margin-right: auto;
+  margin-left: auto; }
+
+@media (max-width: 1000px) and (max-height: 479px) {
+  .message-group__row.__submit {
+    max-width: 190px; }
+  .message-group__row.__submit .button-1 {
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px; }
+  .message-group {
+    margin-bottom: 5px; }
+  .message-group.__text {
+    max-width: 220px;
+    font-size: 12px; }
+  .message-group.__user-enter {
+    font-size: 14px; } }
 
 /* Layer 3 - Cosmetic */
 .c_no-margin {
